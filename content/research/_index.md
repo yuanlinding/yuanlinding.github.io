@@ -1,5 +1,5 @@
 ---
-title: Research
+_title: Research
 cms_exclude: true
 banner:
   caption: ''
