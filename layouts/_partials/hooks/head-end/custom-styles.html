@@ -1,0 +1,157 @@
+{{/* Minimal-style overrides — narrows the column, neutralises HugoBlox decoration,
+     plainens the About bio block toward the reference.png (Rondinelli NU page) layout. */}}
+<style>
+  :root {
+    --nu-purple: #4E2A84;
+    --nu-purple-hover: #3a1f63;
+    --rule: #e7e3ee;
+  }
+
+  /* Narrow the main content column to al-folio-like proportions. */
+  main .container,
+  main > article,
+  main section > .container,
+  .prose {
+    max-width: 760px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Kill gradient-mesh and other decorative section backgrounds. */
+  .gradient-mesh,
+  [class*="gradient-mesh"],
+  .bg-gradient-to-b,
+  .bg-gradient-to-tr,
+  .bg-gradient-to-br {
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  /* Calm down hero / bio chrome: no big rounded boxes, no drop shadows. */
+  section .rounded-3xl,
+  section .rounded-2xl,
+  section .rounded-xl,
+  section .shadow-xl,
+  section .shadow-2xl,
+  section .shadow-md,
+  section .shadow-lg {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Section vertical rhythm — less air than HugoBlox default. */
+  main section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* /publications/ — give breathing room between Preprints and
+     Peer-reviewed sections. */
+  main section#peer-reviewed {
+    margin-top: 3rem !important;
+  }
+
+  /* Headings: tighter weight + size for a research-page feel. No underline. */
+  main h1 { font-weight: 600; letter-spacing: -0.01em; }
+  main h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    color: var(--nu-purple);
+  }
+  main h3 {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--nu-purple);
+  }
+
+  /* Links: Northwestern purple, no underline by default, underline on hover. */
+  main a,
+  main a:visited {
+    color: var(--nu-purple);
+    text-decoration: none;
+  }
+  main a:hover {
+    color: var(--nu-purple-hover);
+    text-decoration: underline;
+  }
+
+  /* Nav: trim ornament, increase font weight. */
+  header nav a { font-weight: 500; }
+
+  /* Hide any residual "Powered by HugoBlox" attribution row in the footer. */
+  footer .hugoblox-attribution,
+  footer a[href*="hugoblox.com"] {
+    display: none !important;
+  }
+
+  /* Publication and talk listings: plain rows, no card chrome. */
+  .citation-item,
+  article.list-item {
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     About page (bio block, resume-biography-3) — match reference.png layout.
+     Plain text, no icon-circles, no card chrome.
+     ──────────────────────────────────────────────────────────────────────── */
+
+  /* Avatar: drop the heavy white ring + drop shadow so the photo sits flat. */
+  .resume-biography .avatar {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Hide the small purple icon circles that sit next to every section
+     heading inside the bio block (about, education, interests). */
+  .resume-biography .flex-shrink-0.w-12.h-12 {
+    display: none !important;
+  }
+
+  /* Hide the "Professional Summary" / About heading row entirely —
+     the bio prose should flow directly under the name. */
+  .resume-biography .mb-12 > .flex.items-center.gap-4 {
+    display: none !important;
+  }
+
+  /* Hide the Education section on the About page entirely.
+     Data stays in me.yaml so /experience/ can still consume it. */
+  .resume-biography .mb-16 {
+    display: none !important;
+  }
+
+  /* Hide the Interests pill section to match the reference layout
+     (reference has no Interests block; bio + education only). */
+  .resume-biography .flex.flex-wrap.gap-3 {
+    display: none !important;
+  }
+  .resume-biography div:has(> .flex.items-center.gap-4 > h3 + *):has(.flex.flex-wrap.gap-3) {
+    display: none !important;
+  }
+  /* Fallback for browsers without :has() support: hide the trailing div
+     in the right column that wraps the interests block. */
+  .resume-biography .md\:col-span-8 > div:last-child:not(.mb-12):not(.mb-16) {
+    display: none !important;
+  }
+
+  /* Social icon buttons: lose the floating round-button chrome
+     so the icons sit as plain inline glyphs (closer to reference). */
+  .resume-biography .flex.flex-wrap.justify-center.gap-4 > a {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    padding: 0.25rem !important;
+    color: var(--nu-purple) !important;
+  }
+  .resume-biography .flex.flex-wrap.justify-center.gap-4 > a:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+</style>
