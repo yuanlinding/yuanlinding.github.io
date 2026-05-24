@@ -10,10 +10,7 @@ tags:
   - ferroelectrics
   - antiferromagnetic tunnel junctions
 featured: true
-image:
-  filename: research_multiferroic-nitride.gif
 links:
-
 ---
 **The promise.** Ferroic materials — for example wurtzite nitrides
 [[AFM]](/publications/adfm-2026-wurtzite-nitrides/) — combine intrinsic bistability
@@ -31,8 +28,7 @@ Despite decades of work, materials that combine multiple ferroic orders
 and their integration into practical devices is more so.
 
 **A particularly underexplored direction.** Combining ferroic materials
-with non-relativistic spin-split antiferromagnets. My recent
-collaborative work
+with non-relativistic spin-split antiferromagnets. My collaborators
 [[preprint-AATJ]](/publications/preprint-2025-octupole-switching/) demonstrated a
 record-high 360% magnetoresistance at room temperature in an
 antiferromagnetic tunnel junction — a concrete pointer toward the kind

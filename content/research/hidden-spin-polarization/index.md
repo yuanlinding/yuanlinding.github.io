@@ -13,7 +13,7 @@ tags:
   - Rashba
   - antiferromagnets
 featured: true
-image:
+_image:
   filename: research_hsp-afm.png
 links:
   - type: paper
