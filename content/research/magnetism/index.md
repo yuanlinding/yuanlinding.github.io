@@ -9,8 +9,9 @@ tags:
   - quantum materials
   - spintronics
 featured: true
+image:
+  filename: research_nrss-afm.png
 links:
-
 ---
 **Origin.** In 1964, Emmanuel Rashba and Solomon Pekar conjectured that a
 *magnetic* mechanism — analogous to spin–orbit coupling but distinct from it —
@@ -27,9 +28,6 @@ on spin–orbit coupling ([PRB **102**, 014422 (2020)](/publications/prb-2020-nr
 and 2021 several other groups independently identified related effects in
 different materials; the class was subsequently named **altermagnets**.
 
-<!-- Igor Mazin's perspective *Altermagnetism Then and Now* (Physics **17**, 4,
-2024) names our work as one of four originating groups.-->
-
 **Symmetry framework.** I built the full symmetry and band-theory framework
 that classifies every crystal into seven *spin-splitting types* (SST-1
 through SST-7), where non-relativistic spin-split antiferromagnetic order belongs to SST-4
@@ -44,10 +42,6 @@ chemical design rule ([Adv. Mater. 2023](/publications/advmat-2023-spin-motif/))
 compensated magnets (subset of SST-4) that is not altermagnet but hosts non-relativistic spin splitting *at the
 Brillouin-zone centre* — accessible in half-metals and insulators, and
 realisable through alloy design ([PRL 2024](/publications/prl-2024-bz-center/)).
-
-<!-- **Recognition.** APS *Physics* Magazine named the discovery of altermagnets a 2024 Top 10
-Highlight; *Science* magazine included it in its 2024 Top Ten Breakthroughs
-of the Year. -->
 
 **What it enables.** These materials are a platform for terahertz spintronics,
 all-antiferromagnetic tunnel junctions (memory beyond Moore's law), and

@@ -20,6 +20,8 @@ tags:
   - compensated magnets
   - symmetry
 featured: true
+image:
+  filename: research_gamma-nrss-afm.png
 links:
   - type: doi
     url: https://doi.org/10.1103/PhysRevLett.133.216701

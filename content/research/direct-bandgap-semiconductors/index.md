@@ -11,6 +11,8 @@ tags:
   - Moore's law
   - DFT
 featured: true
+image:
+  filename: research_semiconductor.png
 links:
   - type: paper
     name: PRB 2018 (unified theory)

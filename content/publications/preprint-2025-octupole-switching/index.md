@@ -46,6 +46,8 @@ tags:
   - spintronics
   - tunnel junctions
 featured: false
+image:
+  filename: research_aatj.png
 links:
   - type: custom
     name: arXiv

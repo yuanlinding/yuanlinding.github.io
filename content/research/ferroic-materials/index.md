@@ -10,6 +10,8 @@ tags:
   - ferroelectrics
   - antiferromagnetic tunnel junctions
 featured: true
+image:
+  filename: research_multiferroic-nitride.gif
 links:
 
 ---

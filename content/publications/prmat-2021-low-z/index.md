@@ -42,6 +42,8 @@ tags:
   - antiferromagnets
   - high-throughput
 featured: false
+image:
+  filename: research_magmat-database.png
 links:
   - type: doi
     url: https://doi.org/10.1103/PhysRevMaterials.5.014409

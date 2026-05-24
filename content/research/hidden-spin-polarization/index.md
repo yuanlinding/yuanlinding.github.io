@@ -13,6 +13,8 @@ tags:
   - Rashba
   - antiferromagnets
 featured: true
+image:
+  filename: research_hsp-afm.png
 links:
   - type: paper
     name: Nat. Commun. 2019 (centrosymmetric Rashba)

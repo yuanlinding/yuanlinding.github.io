@@ -38,6 +38,8 @@ tags:
   - symmetry
   - materials design
 featured: true
+image:
+  filename: research_nrss-afm.png
 links:
   - type: doi
     url: https://doi.org/10.1002/adma.202211966

@@ -42,6 +42,8 @@ tags:
   - antiferromagnets
   - wurtzite nitrides
 featured: false
+image:
+  filename: research_multiferroic-nitride.gif
 links:
   - type: doi
     url: https://doi.org/10.1002/adfm.202525545

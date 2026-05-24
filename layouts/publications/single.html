@@ -20,8 +20,7 @@
 {{ $intro_text := cond $is_manuscript .Params.summary .Params.abstract }}
 {{ $intro_label := cond $is_manuscript (i18n "summary" | default "Summary") (i18n "abstract") }}
 
-{{/* Page Cover */}}
-{{ partial "components/cover.html" . }}
+{{/* Page Cover — disabled: publication subpages should not show a featured image. */}}
 
 <div class="mx-auto flex max-w-screen-xl">
   {{ partial "components/sidebar.html" (dict "context" . "no_sidebar" true) }}
@@ -152,72 +151,9 @@
         </div>
       </div>
 
-      {{ $featured := partial "functions/get_featured_image.html" . }}
-      {{ $image_params := dict }}
-      {{ if and .Params.image (reflect.IsMap .Params.image) }}
-        {{ $image_params = .Params.image }}
-      {{ end }}
-      {{ if and $featured (not $image_params.preview_only) }}
-      {{ $image := $featured }}
-      {{ $placement := $image_params.placement | default 1 }}
-      {{ $image_container := "" }}
-      {{ $responsive_sizes := slice }}
-      {{ $sizes_attr := "" }}
-      {{ if eq $placement 2}}
-        {{ $image_container = "container" }}
-        {{ $responsive_sizes = slice 480 768 1024 1200 1600 }}
-        {{ $sizes_attr = "(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1200px) 80vw, 1200px" }}
-      {{else if eq $placement 3}}
-        {{ $image_container = "container-fluid" }}
-        {{ $responsive_sizes = slice 768 1024 1366 1920 2560 }}
-        {{ $sizes_attr = "(max-width: 768px) 100vw, (max-width: 1366px) 90vw, (max-width: 1920px) 80vw, 2560px" }}
-      {{else}}
-        {{ $image_container = "article-container" }}
-        {{ $responsive_sizes = slice 320 480 640 720 960 }}
-        {{ $sizes_attr = "(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px" }}
-      {{end}}
-      {{ $canProcess := and (reflect.IsImageResourceProcessable $featured) (ne $featured.MediaType.SubType "gif") }}
-      {{ if not $canProcess }}
-        <div class="article-header {{$image_container}} featured-image-wrapper mt-4 mb-16">
-          <div style="position: relative">
-            <img src="{{ $featured.RelPermalink }}"
-                 data-pagefind-meta="image[src]"
-                 alt="{{ with $image_params.alt_text }}{{.}}{{ end }}"
-                 class="featured-image"
-                 fetchpriority="high">
-            {{ with $image_params.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
-          </div>
-        </div>
-      {{ else }}
-        {{ $fitted_image := $featured }}
-        {{ if eq $placement 2}}
-          {{ $fitted_image = $featured.Fit "1200x2500" }}
-        {{else if eq $placement 3}}
-          {{ $fitted_image = $featured.Fit "2560x2560" }}
-        {{else}}
-          {{ $fitted_image = $featured.Fit "720x2500" }}
-        {{end}}
-        {{ $responsive := partial "functions/process_responsive_image.html" (dict
-            "image" $fitted_image
-            "mode" "responsive"
-            "sizes" $responsive_sizes
-        ) }}
-        <div class="article-header {{$image_container}} featured-image-wrapper mt-4 mb-16" style="max-width: {{$fitted_image.Width}}px; max-height: {{$fitted_image.Height}}px;">
-          <div style="position: relative">
-            <img srcset="{{ $responsive.srcset }}"
-                 sizes="{{ $sizes_attr }}"
-                 src="{{ $responsive.fallback.RelPermalink }}"
-                 data-pagefind-meta="image[src]"
-                 width="{{ $fitted_image.Width }}"
-                 height="{{ $fitted_image.Height }}"
-                 alt="{{ with $image_params.alt_text }}{{.}}{{ end }}"
-                 class="featured-image"
-                 fetchpriority="high">
-            {{ with $image_params.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
-          </div>
-        </div>
-      {{ end }}
-      {{end}}
+      {{/* Inline featured-image block intentionally omitted — subpages render
+           text only. The `image.filename:` frontmatter is preserved for any
+           future social-share / Open Graph use. */}}
 
       {{/* PUBLICATION METADATA — local override:
            manuscripts show summary; peer-reviewed show abstract. */}}

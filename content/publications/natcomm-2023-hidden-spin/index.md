@@ -37,6 +37,8 @@ tags:
   - hidden spin polarization
   - antiferromagnets
 featured: true
+image:
+  filename: research_hsp-afm.png
 links:
   - type: doi
     url: https://doi.org/10.1038/s41467-023-40877-8
