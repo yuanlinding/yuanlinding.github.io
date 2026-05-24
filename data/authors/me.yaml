@@ -13,8 +13,8 @@ role: ""
 bio: |
   I develop predictive theories of 
   condensed matter materials and propose them for experimentalists to
-  make. My work pairs first-principles calculations with group- and
-  spin-symmetry analysis to discover new classes of materials with interesting
+  make. My work pairs first-principles calculations with symmetry analysis 
+  to discover new classes of materials with interesting
   electronic and magnetic properties. Specific material class of interests 
   include semicondcutors and ferroic materials. My recent interest extends to 
   integrating these methods into agentic workflows to accelerate materials discovery.
