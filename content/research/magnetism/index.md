@@ -9,7 +9,7 @@ tags:
   - quantum materials
   - spintronics
 featured: true
-image:
+_image:
   filename: research_nrss-afm.png
 links:
 ---
