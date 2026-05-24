@@ -76,7 +76,7 @@ cascade:
       <a href="/research/ferroic-materials/" style="text-decoration: none; color: inherit;">Ferroic materials</a>
     </h3>
     <p style="font-size: 0.85rem; line-height: 1.5; color: #444; margin: 0 0 0.5rem;">
-      Ferroic materials, with intrinsic bistability and fast switching dynamics, have been pursued for decades as a pathway toward nonvolatile logic and memory, significantly reducing the energy cost while transferring data back and forth between memory and processor. Despite decades of research, materials that combine multiple ferroic orders — such as ferroelectricity and magnetism — remain rare.
+      Ferroic materials, with intrinsic bistability and fast switching dynamics, have been pursued for decades as a pathway toward nonvolatile logic and memory. Despite decades of research, materials that combine multiple ferroic orders remain rare.
     </p>
     <a href="/research/ferroic-materials/" style="font-size: 0.85rem;">Read more →</a>
   </div>
