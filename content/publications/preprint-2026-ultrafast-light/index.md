@@ -10,7 +10,6 @@ authors:
 date: "2026-01-01T00:00:00Z"
 publishDate: "2026-01-01T00:00:00Z"
 publication_types: ["manuscript"]
-publication: "Submitted to *Physical Review Letters* (2026)"
 publication_short: "Preprint (2026)"
 summary: |
   Ultrafast optical excitation as a non-magnetic route to switch on

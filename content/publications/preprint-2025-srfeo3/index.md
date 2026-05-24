@@ -11,7 +11,6 @@ authors:
 date: "2025-10-01T00:00:00Z"
 publishDate: "2025-10-01T00:00:00Z"
 publication_types: ["manuscript"]
-publication: "Under review at *Physical Review X* (2025)"
 publication_short: "Preprint (2025)"
 summary: |
   Joint experiment–theory study showing that chemical-expansion-driven biaxial

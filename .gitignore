@@ -14,6 +14,9 @@ data/authors/me-private.yaml
 content/blog
 content/talks
 
+# Tailored job-specific resumes — keep local
+resumes/
+
 # ============================================================================
 # Hugo Build Artifacts
 # ============================================================================
