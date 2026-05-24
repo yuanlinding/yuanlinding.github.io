@@ -44,7 +44,7 @@ cascade:
       <a href="/research/direct-bandgap-semiconductors/" style="text-decoration: none; color: inherit;">Semiconductors</a>
     </h3>
     <p style="font-size: 0.85rem; line-height: 1.5; color: #444; margin: 0 0 0.5rem;">
-      The maturity of CMOS technology ensures continued reliance on silicon platforms. To maximize the potential of electronic materials – such as ferroelectric materials – they need to be integrated with semiconductors. Yet, this integration faces challenges: lattice mismatch, bonding incompatibilities, interface defects, and unstable ferroic states in thin films. Addressing these challenges requires atomic-level understanding of materials and a reliable, innovative way to do high-fidelity simulations of materials and devices.
+      Modern optoelectronic integration on chips needs materials that can emit light directly on a silicon platform. Group-IV semiconductors (Si, Ge) are intrinsically indirect-bandgap, with extremely low luminescence efficiency — a problem that has blocked CMOS-monolithic on-chip light sources for half a century.
     </p>
     <a href="/research/direct-bandgap-semiconductors/" style="font-size: 0.85rem;">Read more →</a>
   </div>
@@ -60,7 +60,7 @@ cascade:
       <a href="/research/magnetism/" style="text-decoration: none; color: inherit;">Novel magnetic materials</a>
     </h3>
     <p style="font-size: 0.85rem; line-height: 1.5; color: #444; margin: 0 0 0.5rem;">
-      Antiferromagnets (AFMs) offer zero stray fields and terahertz spin dynamics, making them ideal for ultrafast, energy-efficient spintronics. Yet, their spin-degenerate bands have limited practical use. Recent works have uncovered a new class of AFMs — certain collinear and noncollinear AFMs — that exhibit momentum-dependent net spin splitting from a specific combination of magnetic order and crystal symmetry. The strict symmetry criteria for this class narrow the materials pool and exclude many promising candidates.
+      Antiferromagnets (AFMs) offer zero stray fields and terahertz spin dynamics, making them ideal for ultrafast, energy-efficient spintronics. Yet, their spin-degenerate bands have limited practical use. Recent works have uncovered a new class of AFMs — certain collinear and noncollinear AFMs — that exhibit momentum-dependent net spin splitting from a specific combination of magnetic order and crystal symmetry. 
     </p>
     <a href="/research/magnetism/" style="font-size: 0.85rem;">Read more →</a>
   </div>
@@ -76,7 +76,7 @@ cascade:
       <a href="/research/ferroic-materials/" style="text-decoration: none; color: inherit;">Ferroic materials</a>
     </h3>
     <p style="font-size: 0.85rem; line-height: 1.5; color: #444; margin: 0 0 0.5rem;">
-      Ferroic materials, with intrinsic bistability and fast switching dynamics, have been pursued for decades as a pathway toward nonvolatile logic and memory, significantly reducing the energy cost while transferring data back and forth between memory and processor. Nonetheless, how structural instability, covalency, and correlation cooperate or compete to stabilize a ferroic phase remains a rich source for advancing fundamental materials theory. Despite decades of research, materials that combine multiple ferroic orders — such as ferroelectricity and magnetism — remain rare, and their integration into practical devices is still limited.
+      Ferroic materials, with intrinsic bistability and fast switching dynamics, have been pursued for decades as a pathway toward nonvolatile logic and memory, significantly reducing the energy cost while transferring data back and forth between memory and processor. Despite decades of research, materials that combine multiple ferroic orders — such as ferroelectricity and magnetism — remain rare.
     </p>
     <a href="/research/ferroic-materials/" style="font-size: 0.85rem;">Read more →</a>
   </div>
