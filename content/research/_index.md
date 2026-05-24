@@ -60,7 +60,7 @@ cascade:
       <a href="/research/magnetism/" style="text-decoration: none; color: inherit;">Novel magnetic materials</a>
     </h3>
     <p style="font-size: 0.85rem; line-height: 1.5; color: #444; margin: 0 0 0.5rem;">
-      Antiferromagnets (AFMs) offer zero stray fields and terahertz spin dynamics, making them ideal for ultrafast, energy-efficient spintronics. Yet, their spin-degenerate bands have limited practical use. Recent works have uncovered a new class of AFMs — certain collinear and noncollinear AFMs — that exhibit momentum-dependent net spin splitting from a specific combination of magnetic order and crystal symmetry. 
+      Antiferromagnets (AFMs) offer zero stray fields and terahertz spin dynamics, making them ideal for ultrafast, energy-efficient spintronics. Yet, their spin-degenerate bands have limited practical use. 
     </p>
     <a href="/research/magnetism/" style="font-size: 0.85rem;">Read more →</a>
   </div>
