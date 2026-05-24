@@ -11,11 +11,24 @@ publication_types: ["article-journal"]
 publication: "*Nature Communications* **14**, 5301 (2023)"
 publication_short: "*Nat. Commun.* (2023)"
 abstract: |
-  Conventional band-structure analysis presents collinear antiferromagnets as
-  spin-degenerate. Here we use site-projected (sub-lattice-local) spin operators
-  to reveal that the apparent spin-degeneracy hides a *non-zero, momentum-resolved
-  local spin polarisation* on each magnetic sub-lattice — a hidden form of
-  spin texture that controls experimentally accessible response functions.
+  Many textbook physical effects in crystals are enabled by some specific
+  symmetries. In contrast to such "apparent effects", "hidden effect X"
+  refers to the general condition where the nominal global system
+  symmetry would disallow the effect X, whereas the symmetry of local
+  sectors within the crystal would enable effect X. Known examples
+  include the hidden Rashba and/or hidden Dresselhaus spin polarization
+  that require spin–orbit coupling, but unlike their apparent counterparts
+  are demonstrated to exist in non-magnetic systems even in
+  inversion-symmetric crystals. Here, we discuss hidden spin polarization
+  effect in collinear antiferromagnets without the requirement for
+  spin–orbit coupling (SOC). Symmetry analysis suggests that
+  antiferromagnets hosting such effect can be classified into six types
+  depending on the global vs local symmetry. We identify which of the
+  possible collinear antiferromagnetic compounds will harbor such hidden
+  polarization and validate these symmetry enabling predictions with
+  first-principles density functional calculations for several
+  representative compounds. This will boost the theoretical and
+  experimental efforts in finding new spin-polarized materials.
 summary: |
   Generalises hidden spin polarisation — previously known for non-magnetic
   systems — to antiferromagnetic crystals, opening a route to use compensated
