@@ -8,6 +8,7 @@
 /reference.png
 /self-summary.md
 /research.md
+CLAUDE.md
 
 # Private author data (education, experience, awards) — keep local only
 data/authors/me-private.yaml
