@@ -25,6 +25,30 @@ cascade:
     line-height: 1.55;
     margin-bottom: 1rem;
   }
+
+  /* Phone (<=640px, Tailwind sm breakpoint): collapse 3-column gallery
+     to a single stacked column; drop the 1100px override; widen image
+     crop slightly since each card is now full-bleed. */
+  @media (max-width: 640px) {
+    main .container,
+    main > article,
+    main section > .container,
+    .prose,
+    .max-w-prose {
+      max-width: 100% !important;
+    }
+    .research-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1.25rem !important;
+    }
+    .research-card img {
+      aspect-ratio: 16 / 9 !important;
+    }
+    .research-intro {
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+  }
 </style>
 
 <p class="research-intro">
