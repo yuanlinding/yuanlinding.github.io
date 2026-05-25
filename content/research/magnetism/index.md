@@ -43,6 +43,6 @@ compensated magnets (subset of SST-4) that is not altermagnet but hosts non-rela
 Brillouin-zone centre* — accessible in half-metals and insulators, and
 realisable through alloy design ([PRL 2024](/publications/prl-2024-bz-center/)).
 
-**What it enables.** These materials are a platform for terahertz spintronics,
+**What it could enable.** These materials are a platform for terahertz spintronics,
 all-antiferromagnetic tunnel junctions (memory beyond Moore's law), and
 unconventional superconducting pairing on a magnetically active substrate.

@@ -34,6 +34,6 @@ record-high 360% magnetoresistance at room temperature in an
 antiferromagnetic tunnel junction — a concrete pointer toward the kind
 of device physics this combination can enable.
 
-**What it enables.** A class of compact, low-power, on-chip storage and
+**What it could enable.** A future class of compact, low-power, on-chip storage and
 logic primitives that don't depend on conventional ferromagnets — and a
 direct path for ferroic materials into the spintronic device stack.

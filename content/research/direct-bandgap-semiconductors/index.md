@@ -37,10 +37,11 @@ remaining CMOS-compatible.* The results was published in
 and is protected by a *Chinese patent*  and a *US patent
 application*.
 
-**What it enables.** A silicon-monolithic, CMOS-compatible on-chip light
+**What it could enable.** A silicon-monolithic, CMOS-compatible on-chip light
 source — a direct response to a core need in chip manufacturing and a
 concrete lever on the Moore's-law extension problem.
 
+<!--
 **[***Chinese Patent***]** 骆军委, 袁林丁, 李树深 (Luo, J. W., Yuan, L. D., & Li, S. S.)
 (2018). 直接带隙发光的硅基材料及制备方法、芯片上发光器件 [Silicon-based
 direct bandgap light-emitting material and preparation method thereof,
@@ -50,3 +51,4 @@ CN108461584B.
 **[***US Patent Application***]** Luo, J. W., Yuan, L. D., & Li, S. S. (2020). Silicon-based direct
 bandgap light-emitting material and preparation method thereof, and
 on-chip light-emitting device. *U.S. Patent Application* No. 16/760,863.
+-->
