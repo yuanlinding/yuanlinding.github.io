@@ -36,10 +36,14 @@ cascade:
     .prose,
     .max-w-prose {
       max-width: 100% !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
     }
     .research-grid {
       grid-template-columns: 1fr !important;
       gap: 1.25rem !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
     .research-card img {
       aspect-ratio: 16 / 9 !important;
