@@ -14,7 +14,7 @@ _image:
 links:
 ---
 **Origin.** In 1964, Emmanuel Rashba and Solomon Pekar conjectured that a
-*magnetic* mechanism — analogous to spin–orbit coupling but distinct from it —
+*magnetic* mechanism [Soviet physics JETP (1964)](https://www.jetp.ras.ru/cgi-bin/dn/e_020_05_1295.pdf) — analogous to spin–orbit coupling but distinct from it —
 could produce spin effects useful for electronic and memory devices. The
 conjecture sat unconfirmed for half a century, and *which* material systems
 would realise the effect was unknown. Through 2018 conversations with
