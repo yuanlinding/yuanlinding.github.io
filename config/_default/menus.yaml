@@ -11,7 +11,15 @@ main:
   - name: Tools
     url: /tools/
     weight: 40
-  - name: Spin Polarized Magnets
+  - name: Novel Magnets
     url: /database/
     parent: Tools
     weight: 1
+  - name: FINDMAGSYM
+    url: https://findmagsym.streamlit.app/
+    parent: Tools
+    weight: 2
+  - name: MAGIRREP
+    url: https://github.com/yuanlinding/RepresentationAnalysis/tree/main
+    parent: Tools
+    weight: 3
