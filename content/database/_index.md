@@ -1,10 +1,9 @@
 ---
-title: "SST Materials Database"
+title: "Spin Polarized Magnets"
 date: 2026-05-28
 summary: |
-  Interactive database of ~2,400 experimentally determined magnetic materials
-  with spin-splitting type (SST), magnetic space group, Néel temperature,
-  and literature reference.
+  Interactive database of ~2,400 experimentally determined spin-polarized magnets
+  with SST classification, magnetic space group, Néel temperature, and literature reference.
 ---
 
 This database collects magnetic crystal structures from

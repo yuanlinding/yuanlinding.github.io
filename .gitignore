@@ -25,6 +25,9 @@ resumes/
 # Generated site output
 public/
 
+# Hugo module vendor directory
+_vendor/
+
 # Hugo resources (processed assets)
 resources/
 

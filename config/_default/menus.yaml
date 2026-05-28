@@ -11,6 +11,7 @@ main:
   - name: Tools
     url: /tools/
     weight: 40
-  - name: Database
+  - name: Spin Polarized Magnets
     url: /database/
-    weight: 50
+    parent: Tools
+    weight: 1
