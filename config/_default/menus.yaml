@@ -11,3 +11,6 @@ main:
   - name: Tools
     url: /tools/
     weight: 40
+  - name: Database
+    url: /database/
+    weight: 50

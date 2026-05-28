@@ -1,0 +1,159 @@
+{{/* SST Materials Database — Tabulator.js interactive table */}}
+<link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator_simple.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+
+<style>
+  #sst-db-controls {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  #sst-db-search {
+    flex: 1 1 200px;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  #sst-db-sst-filter {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  #sst-db-count {
+    font-size: 0.85rem;
+    color: #666;
+    margin-left: auto;
+  }
+  #sst-table-container {
+    font-size: 0.85rem;
+  }
+  .tabulator-row .tabulator-cell { padding: 4px 6px; }
+  .sst-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: white;
+  }
+  .sst-4x, .sst-4y { background: #4E2A84; }
+  .sst-3a, .sst-3b { background: #0066cc; }
+  .sst-1  { background: #cc4400; }
+  .sst-2  { background: #cc7700; }
+  .sst-5  { background: #2a7a2a; }
+  .sst-6, .sst-7 { background: #888; }
+</style>
+
+<div id="sst-db-controls">
+  <input id="sst-db-search" type="text" placeholder="Search formula, MSG, irrep…">
+  <select id="sst-db-sst-filter">
+    <option value="">All SST types</option>
+    <option value="SST-1">SST-1</option>
+    <option value="SST-2">SST-2</option>
+    <option value="SST-3A">SST-3A</option>
+    <option value="SST-3B">SST-3B</option>
+    <option value="SST-4x">SST-4x (NRSS)</option>
+    <option value="SST-4y">SST-4y (NRSS)</option>
+    <option value="SST-5">SST-5</option>
+    <option value="SST-6">SST-6</option>
+    <option value="SST-7">SST-7</option>
+  </select>
+  <span id="sst-db-count">Loading…</span>
+</div>
+<div id="sst-table-container"></div>
+
+<script>
+(function() {
+  function sstBadge(cell) {
+    var val = cell.getValue() || "";
+    var cls = val.replace("SST-","sst-").toLowerCase();
+    return '<span class="sst-badge ' + cls + '">' + val + '</span>';
+  }
+
+  function refFormatter(cell) {
+    var row = cell.getRow().getData();
+    var doi = row.citation_doi;
+    if (!doi) return row.citation_authors || "—";
+    var label = row.citation_authors
+      ? row.citation_authors + " (" + (row.citation_year || "") + ")"
+      : doi;
+    return '<a href="https://doi.org/' + doi + '" target="_blank" rel="noopener">' + label + '</a>';
+  }
+
+  function magnLink(cell) {
+    var url = cell.getValue();
+    if (!url) return "—";
+    var label = cell.getRow().getData().label || "link";
+    return '<a href="' + url + '" target="_blank" rel="noopener">' + label + '</a>';
+  }
+
+  function tempFormatter(cell) {
+    var v = cell.getValue();
+    return v != null ? String(v) : "—";
+  }
+
+  var columns = [
+    { title: "Formula",      field: "formula",      headerFilter: "input", width: 170, formatter: "html" },
+    { title: "SST",          field: "sst",           width: 90,  formatter: sstBadge,    headerFilter: false },
+    { title: "TN (K)",       field: "transition_temperature", width: 80, sorter: "number", formatter: tempFormatter },
+    { title: "MSG (SOC)",    field: "msg_soc_sym",   headerFilter: "input", width: 140 },
+    { title: "MSG (no SOC)", field: "msg_nosoc_sym", headerFilter: "input", width: 140 },
+    { title: "Spin Group",   field: "spin_group",    headerFilter: "input", width: 110 },
+    { title: "Irrep",        field: "irrep_id",      headerFilter: "input", width: 90  },
+    { title: "Reference",    field: "citation_doi",  formatter: refFormatter, width: 210, headerFilter: false },
+    { title: "MAGNDATA",     field: "magndata_url",  formatter: magnLink,    width: 95,  headerFilter: false },
+    { title: "Source",       field: "source",        headerFilter: "input",  width: 100 },
+  ];
+
+  fetch("/data/sst_database.json")
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var table = new Tabulator("#sst-table-container", {
+        data: data,
+        layout: "fitColumns",
+        height: "620px",
+        columns: columns,
+        pagination: "local",
+        paginationSize: 50,
+        paginationSizeSelector: [25, 50, 100, 500],
+        initialSort: [{ column: "transition_temperature", dir: "desc" }],
+      });
+
+      document.getElementById("sst-db-count").textContent =
+        data.length + " entries";
+
+      function applyFilters() {
+        var q   = document.getElementById("sst-db-search").value.trim();
+        var sst = document.getElementById("sst-db-sst-filter").value;
+        table.clearFilter();
+        if (q) {
+          table.setFilter([
+            [
+              { field: "formula",       type: "like", value: q },
+              { field: "msg_soc_sym",   type: "like", value: q },
+              { field: "msg_nosoc_sym", type: "like", value: q },
+              { field: "spin_group",    type: "like", value: q },
+              { field: "irrep_id",      type: "like", value: q },
+              { field: "sst",           type: "like", value: q },
+            ]
+          ]);
+        }
+        if (sst) {
+          table.addFilter("sst", "=", sst);
+        }
+      }
+
+      document.getElementById("sst-db-search").addEventListener("input", applyFilters);
+      document.getElementById("sst-db-sst-filter").addEventListener("change", applyFilters);
+
+      table.on("dataFiltered", function(filters, rows) {
+        document.getElementById("sst-db-count").textContent =
+          rows.length + " / " + data.length + " entries";
+      });
+    });
+})();
+</script>
