@@ -95,16 +95,22 @@
     return v != null ? String(v) : "—";
   }
 
+  function irrepFormatter(cell) {
+    var v = cell.getValue();
+    if (!v) return "—";
+    return v.replace(/GM/g, "Γ");
+  }
+
   var columns = [
     { title: "Formula",      field: "formula",      headerFilter: "input", width: 170, formatter: "html" },
     { title: "SST",          field: "sst",           width: 90,  formatter: sstBadge,    headerFilter: false },
-    { title: "TN (K)",       field: "transition_temperature", width: 80, sorter: "number", formatter: tempFormatter },
+    { title: "T<sub>N</sub> (K)", field: "transition_temperature", width: 90, sorter: "number", formatter: tempFormatter },
     { title: "MSG (SOC)",    field: "msg_soc_sym",   headerFilter: "input", width: 140 },
     { title: "MSG (no SOC)", field: "msg_nosoc_sym", headerFilter: "input", width: 140 },
     { title: "Spin Group",   field: "spin_group",    headerFilter: "input", width: 110 },
-    { title: "Irrep",        field: "irrep_id",      headerFilter: "input", width: 90  },
+    { title: "Irrep",        field: "irrep_id",      headerFilter: "input", width: 90, formatter: irrepFormatter },
     { title: "Reference",    field: "citation_doi",  formatter: refFormatter, width: 210, headerFilter: false },
-    { title: "MAGNDATA",     field: "magndata_url",  formatter: magnLink,    width: 95,  headerFilter: false },
+    { title: "ID",           field: "magndata_url",  formatter: magnLink,    width: 75,  headerFilter: false },
     { title: "Source",       field: "source",        headerFilter: "input",  width: 100 },
   ];
 
