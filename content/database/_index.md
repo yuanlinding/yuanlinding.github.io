@@ -10,7 +10,7 @@ summary: |
 This database collects experimentally determined magnetic crystal structures from
 [MAGNDATA](https://cryst.ehu.es/magndata) and classifies each by its
 spin-splitting type (SST), magnetic space group symmetry with and without
-spin-orbit coupling (SOC), spin space group, magnetic irreducible representation,
+spin-orbit coupling (SOC), spin group, magnetic irreducible representation,
 and experimental Néel temperature.
 
 The SST classification scheme is described in
