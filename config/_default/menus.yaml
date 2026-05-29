@@ -16,7 +16,7 @@ main:
     parent: Tools
     weight: 1
   - name: FINDMAGSYM
-    url: https://findmagsym.streamlit.app/
+    url: /tools/findmagsym/
     parent: Tools
     weight: 2
   - name: MAGIRREP
