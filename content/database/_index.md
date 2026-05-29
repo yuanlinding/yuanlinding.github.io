@@ -1,11 +1,10 @@
 ---
-title: "Novel Magnets"
+title: "Novel Magnets Database"
 date: 2026-05-28
 summary: |
   Interactive database of ~1,800 experimentally determined magnetic materials
   with SST classification, magnetic space group, Néel temperature, and literature reference.
 ---
-
 <style>article.prose h1:first-of-type { display: none !important; }</style>
 
 This database collects experimentally determined magnetic crystal structures from
