@@ -20,6 +20,6 @@ main:
     parent: Tools
     weight: 2
   - name: MAGIRREP
-    url: https://github.com/yuanlinding/RepresentationAnalysis/tree/main
+    url: /tools/magirrep.html
     parent: Tools
     weight: 3
