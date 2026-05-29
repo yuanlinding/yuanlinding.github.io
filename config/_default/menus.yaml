@@ -20,6 +20,6 @@ main:
     parent: Tools
     weight: 2
   - name: MAGIRREP
-    url: /tools/magirrep.html
+    url: /tools/magirrep/
     parent: Tools
     weight: 3
