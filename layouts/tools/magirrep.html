@@ -29,8 +29,7 @@
   </div>
 
   <div class="mr-modes">
-    <label><input type="radio" name="mr-mode" value="combined" checked> Combined (magnetic + displacive)</label>
-    <label><input type="radio" name="mr-mode" value="magnetic"> Magnetic only (faster)</label>
+    <label><input type="radio" name="mr-mode" value="magnetic" checked> Magnetic</label>
     <label><input type="radio" name="mr-mode" value="displacive"> Displacive</label>
   </div>
 
@@ -109,7 +108,7 @@
       runBtn.disabled = true;
       outputEl.style.display = 'none';
       dlBtn.style.display = 'none';
-      statusEl.textContent = 'Running… (first request may take ~20 s if the server is cold)';
+      statusEl.textContent = 'Running… (may take up to 1–2 min; first request after inactivity is slowest)';
 
       try {
         const resp = await fetch(`${API}/analyze`, { method: 'POST', body: fd });
