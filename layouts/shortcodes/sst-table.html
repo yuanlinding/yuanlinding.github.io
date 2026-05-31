@@ -46,6 +46,23 @@
   .sst-2  { background: #cc7700; }
   .sst-5  { background: #2a7a2a; }
   .sst-6, .sst-7 { background: #888; }
+
+  /* Phone / small-screen layout */
+  @media (max-width: 640px) {
+    #sst-db-controls {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
+    #sst-db-search { flex: 1 1 auto; width: 100%; }
+    #sst-db-sst-filter { width: 100%; }
+    #sst-db-count { margin-left: 0; text-align: left; }
+    #sst-table-container { font-size: 0.8rem; }
+  }
+  /* Tabulator's collapse toggle + collapsed key/value list */
+  .tabulator-responsive-collapse { padding: 6px; }
+  .tabulator-responsive-collapse td { border: none; padding: 2px 4px; }
+  .tabulator-responsive-collapse td:first-child { font-weight: 600; color: #444; }
 </style>
 
 <div id="sst-db-controls">
@@ -114,12 +131,27 @@
     { title: "Source",       field: "source",        headerFilter: "input",  width: 100 },
   ];
 
+  // On narrow screens, collapse lower-priority columns into an expandable
+  // row instead of squeezing all 10 columns. Higher number = collapses first.
+  var responsivePriority = {
+    formula: 0, sst: 1, transition_temperature: 2, magndata_url: 3,
+    msg_soc_sym: 4, msg_nosoc_sym: 5, spin_group: 6, irrep_id: 7,
+    citation_doi: 8, source: 9
+  };
+  var minWidths = { formula: 110, sst: 70, transition_temperature: 70, magndata_url: 60 };
+  columns.forEach(function(c) {
+    c.responsive = responsivePriority[c.field];
+    if (minWidths[c.field]) c.minWidth = minWidths[c.field];
+  });
+
   fetch("/data/sst_database.json")
     .then(function(r) { return r.json(); })
     .then(function(data) {
       var table = new Tabulator("#sst-table-container", {
         data: data,
         layout: "fitColumns",
+        responsiveLayout: "collapse",
+        responsiveLayoutCollapseStartOpen: false,
         height: "620px",
         columns: columns,
         pagination: "local",
