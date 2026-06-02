@@ -28,9 +28,16 @@
     color: #666;
     margin-left: auto;
   }
+  /* Cap the widget to its column and scroll the wide table inside its own
+     box, so it never forces the whole page wider than the phone viewport.
+     overflow-x:auto also gives this element a 0 min-content width, which
+     stops it pushing its flex-item ancestor past the screen edge. */
   #sst-table-container {
     font-size: 0.85rem;
+    max-width: 100%;
+    overflow-x: auto;
   }
+  #sst-table-container .tabulator { max-width: 100%; }
   .tabulator-row .tabulator-cell { padding: 4px 6px; }
   .sst-badge {
     display: inline-block;
