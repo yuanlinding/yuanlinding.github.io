@@ -7,7 +7,7 @@ authors:
 date: "2024-06-01T00:00:00Z"
 publishDate: "2024-06-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Physical Review Letters* (2024) — Editors' Suggestion"
+publication: "*Physical Review Letters* **133**, 216701 (2024) — Editors' Suggestion"
 publication_short: "*Phys. Rev. Lett.* (2024)"
 abstract: |
 

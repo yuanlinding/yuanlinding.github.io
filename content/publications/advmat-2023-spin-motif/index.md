@@ -1,12 +1,12 @@
 ---
-title: "Degeneracy removal of spin bands in antiferromagnets with non-interconvertible spin motif pair"
+title: "Degeneracy removal of spin bands in collinear antiferromagnets with non-interconvertible spin-structure motif pair"
 authors:
   - me
   - Alex Zunger
-date: "2023-08-01T00:00:00Z"
-publishDate: "2023-08-01T00:00:00Z"
+date: "2023-06-25T00:00:00Z"
+publishDate: "2023-06-25T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Advanced Materials* **35**, 2300379 (2023)"
+publication: "*Advanced Materials* **35**, 2211966 (2023)"
 publication_short: "*Adv. Mater.* (2023)"
 abstract: |
   Energy bands in antiferromagnets are supposed to be spin degenerate in

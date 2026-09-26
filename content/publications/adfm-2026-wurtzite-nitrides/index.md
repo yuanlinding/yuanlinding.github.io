@@ -5,10 +5,10 @@ authors:
   - me
   - Stephen D. Wilson
   - James M. Rondinelli
-date: "2026-01-01T00:00:00Z"
-publishDate: "2026-01-01T00:00:00Z"
+date: "2026-04-24T00:00:00Z"
+publishDate: "2026-04-24T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Advanced Functional Materials* e25545 (2026)"
+publication: "*Advanced Functional Materials* **36**, e25545 (2026) — Issue cover (68/2026)"
 publication_short: "*Adv. Funct. Mater.* (2026)"
 abstract: |
   Wurtzite-type nitrides have recently emerged as promising candidates for

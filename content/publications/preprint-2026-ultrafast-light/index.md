@@ -1,5 +1,5 @@
 ---
-title: "A route to non-relativistic altermagnetic spin splitting via ultrafast light"
+title: "A route to nonrelativistic altermagnetic spin splitting via ultrafast light"
 authors:
   - H.Z.X. Chen
   - me
@@ -7,8 +7,8 @@ authors:
   - L.W. Wang
   - Jun-Wei Luo
   - Zhi Wang
-date: "2026-01-01T00:00:00Z"
-publishDate: "2026-01-01T00:00:00Z"
+date: "2026-04-03T00:00:00Z"
+publishDate: "2026-04-03T00:00:00Z"
 publication_types: ["manuscript"]
 publication_short: "Preprint (2026)"
 abstract: |

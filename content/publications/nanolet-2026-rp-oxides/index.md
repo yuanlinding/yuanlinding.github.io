@@ -1,5 +1,5 @@
 ---
-title: "Tunable hidden non-relativistic spin splitting in layered Ruddlesden–Popper oxides"
+title: "Tunable hidden altermagnetic spin splitting in layered Ruddlesden–Popper oxides"
 authors:
   - Tongxie Zhang
   - me

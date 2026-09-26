@@ -5,10 +5,10 @@ authors:
   - Danilo Puggioni
   - me
   - James M. Rondinelli
-date: "2026-01-01T00:00:00Z"
-publishDate: "2026-01-01T00:00:00Z"
+date: "2026-05-07T00:00:00Z"
+publishDate: "2026-05-07T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Physical Review Materials* (2026) — Invited (Altermagnetic & related materials collection)"
+publication: "*Physical Review Materials* **10**, 054404 (2026) — Invited (Altermagnetic & related materials collection)"
 publication_short: "*Phys. Rev. Materials* (2026)"
 abstract: |
   Many studies of non-relativistic spin-splitting (NRSS), or altermagnetism,
